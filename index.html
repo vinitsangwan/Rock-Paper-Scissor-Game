@@ -8,6 +8,23 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="preloader-content">
+            <h2 class="preloader-title">Rock Paper Scissors</h2>
+            <div class="loader-icons">
+                <div class="loader-icon">✊</div>
+                <div class="loader-icon">✋</div>
+                <div class="loader-icon">✌️</div>
+            </div>
+            <div class="progress-bar">
+                <div class="progress-fill"></div>
+            </div>
+            <p class="loading-text">Loading Game...</p>
+        </div>
+    </div>
+
+    <!-- Your Original Code Below -->
     <h1>Rock Paper Scissor</h1>
     <div class="choices">
     <div class="choice" id="rock">
@@ -20,7 +37,6 @@
         <img src="scissor.png">
     </div>
     </div>
-
     <div class="score-board">
         <div class="score">
         <p id="user-score">0</p>
@@ -31,10 +47,18 @@
         <p>Comp</p>
     </div>
     </div>
-
     <div class="msg-container">
         <p id="msg">Play your move</p>
     </div> 
-<script src="script.js"></script>
+
+    <script>
+        // Preloader Logic
+        window.addEventListener('load', function() {
+            setTimeout(function() {
+                document.getElementById('preloader').classList.add('fade-out');
+            }, 2000); // Preloader shows for 2 seconds
+        });
+    </script>
+    <script src="script.js"></script>
 </body>
 </html>
