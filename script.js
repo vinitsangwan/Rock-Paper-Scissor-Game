@@ -1,3 +1,9 @@
+// Preloader Logic
+        window.addEventListener('load', function() {
+            setTimeout(function() {
+                document.getElementById('preloader').classList.add('fade-out');
+            }, 4000); // Preloader shows for 4 seconds
+        });
 let userScore=0;
 let compScore=0;
 
@@ -67,4 +73,5 @@ choices.forEach((choice) => {
     playGame(userChoice);
     });
 });
+
 
